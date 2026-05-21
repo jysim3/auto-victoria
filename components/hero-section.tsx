@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { ArrowRight, ChevronDown } from 'lucide-react'
+import { ArrowRight, ChevronDown, ClipboardCheck, CreditCard, ShieldCheck, Wrench } from 'lucide-react'
 
 const proofPoints = [
   { value: '300+', label: 'Vehicles sold yearly' },
@@ -10,9 +10,16 @@ const proofPoints = [
   { value: '2000+', label: 'Business customers' },
 ]
 
+const customerBenefits = [
+  { icon: ClipboardCheck, label: 'PUSPAKOM & JPJ handled' },
+  { icon: CreditCard, label: 'Credit support arranged' },
+  { icon: ShieldCheck, label: 'Insurance support ready' },
+  { icon: Wrench, label: 'Servicing access after purchase' },
+]
+
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -22,109 +29,118 @@ export function HeroSection() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/50" />
       </div>
       
       {/* Subtle vignette */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.5)_100%)]" />
 
       {/* Deck-inspired yellow panels */}
-      <div className="absolute -top-10 left-[8%] hidden h-[42vh] w-56 bg-primary/90 lg:block [clip-path:polygon(0_0,100%_0,100%_76%,50%_100%,0_76%)]" />
-      <div className="absolute bottom-0 right-[10%] hidden h-[46vh] w-56 bg-primary/90 lg:block [clip-path:polygon(0_0,100%_0,100%_80%,50%_100%,0_80%)]" />
-      <div className="absolute left-0 top-[64%] h-44 w-full -skew-y-12 bg-background/90" />
+      <div className="absolute -top-20 right-[9%] hidden h-[46vh] w-52 bg-primary/90 xl:block [clip-path:polygon(0_0,100%_0,100%_78%,50%_100%,0_78%)]" />
+      <div className="absolute bottom-0 right-[18%] hidden h-[28vh] w-40 bg-primary/80 lg:block [clip-path:polygon(0_0,100%_0,100%_78%,50%_100%,0_78%)]" />
+      <div className="absolute left-0 top-[70%] h-44 w-full -skew-y-12 bg-background/95" />
+      <div className="absolute bottom-0 left-0 h-2 w-full bg-primary" />
 
-      <div className="relative z-10 mx-auto max-w-5xl px-6 lg:px-8 text-center">
-        {/* Pre-headline */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-12"
-        >
-          <span className="inline-flex items-center gap-4 text-[11px] tracking-[0.35em] text-primary/90 uppercase">
-            <span className="w-12 h-px bg-primary/40" />
-            Bukit Mertajam, Penang | Established 2013
-            <span className="w-12 h-px bg-primary/40" />
-          </span>
-        </motion.div>
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 py-28 lg:px-8">
+        <div className="grid w-full gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+          <div>
+            {/* Pre-headline */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-8"
+            >
+              <span className="inline-flex max-w-full flex-wrap items-center gap-3 text-[11px] uppercase tracking-[0.28em] text-primary/90">
+                <span className="h-px w-10 bg-primary/50" />
+                Auto Victoria | Bukit Mertajam, Penang
+              </span>
+            </motion.div>
 
-        {/* Main Headline - Premium Cinzel Typography */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-10"
-        >
-          <h1 className="font-[var(--font-display)] tracking-[0.12em] leading-[0.95]">
-            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground font-bold">
-              AUTO
-            </span>
-            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground font-bold">
-              VICTORIA
-            </span>
-            <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-transparent [-webkit-text-stroke:1px_var(--primary)] font-bold">
-              GROUP
-            </span>
-          </h1>
-        </motion.div>
-        
-        {/* Gold divider */}
-        <motion.div
-          initial={{ opacity: 0, scaleX: 0 }}
-          animate={{ opacity: 1, scaleX: 1 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="mb-12 mx-auto flex items-center justify-center gap-4"
-        >
-          <span className="w-20 h-px bg-gradient-to-r from-transparent to-primary/60" />
-          <span className="w-1.5 h-1.5 rotate-45 bg-primary/80" />
-          <span className="w-20 h-px bg-gradient-to-l from-transparent to-primary/60" />
-        </motion.div>
+            {/* Main Headline */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              className="mb-8"
+            >
+              <h1 className="max-w-5xl font-[var(--font-display)] text-5xl font-bold leading-[0.95] tracking-[0.04em] text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
+                Commercial Vehicles,
+                <span className="block text-primary">Ready for Business.</span>
+              </h1>
+            </motion.div>
 
-        {/* Tagline */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="max-w-xl mx-auto text-xs md:text-sm text-muted-foreground tracking-[0.25em] uppercase mb-16 font-light"
-        >
-          Partner for the Next Stage of Commercial Mobility
-        </motion.p>
+            {/* Gold divider */}
+            <motion.div
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 1, scaleX: 1 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="mb-8 flex origin-left items-center gap-4"
+            >
+              <span className="h-px w-24 bg-gradient-to-r from-primary to-transparent" />
+              <span className="h-1.5 w-1.5 rotate-45 bg-primary/80" />
+            </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.95 }}
-          className="mx-auto mb-12 grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-3"
-        >
-          {proofPoints.map((item) => (
-            <div key={item.label} className="border border-primary/30 bg-background/70 px-5 py-4 backdrop-blur-sm">
-              <p className="text-2xl font-bold text-primary">{item.value}</p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-muted-foreground">{item.label}</p>
+            {/* Tagline */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
+              className="max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
+            >
+              New and used vans and trucks, financing, insurance, registration, inspection, body work,
+              and servicing access arranged through one commercial vehicle partner.
+            </motion.p>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.05 }}
+              className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
+            >
+              <a
+                href="#services"
+                className="group inline-flex items-center justify-center gap-3 bg-primary px-9 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:bg-primary/90"
+              >
+                See What We Provide
+                <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center gap-2 border border-primary/40 px-9 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-foreground transition-all duration-300 hover:border-primary hover:text-primary"
+              >
+                Talk to Sales
+              </a>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.75 }}
+            className="lg:justify-self-end"
+          >
+            <div className="mb-6 grid grid-cols-3 border-y border-primary/25 bg-background/60 backdrop-blur-sm">
+              {proofPoints.map((item) => (
+                <div key={item.label} className="border-r border-primary/20 px-4 py-5 last:border-r-0">
+                  <p className="text-2xl font-bold text-primary md:text-3xl">{item.value}</p>
+                  <p className="mt-2 text-[10px] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground">{item.label}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </motion.div>
 
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.1 }}
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-        >
-          <a
-            href="#about"
-            className="group inline-flex items-center gap-3 px-10 py-4 bg-primary text-primary-foreground text-xs font-medium tracking-[0.2em] uppercase hover:bg-primary/90 transition-all duration-300"
-          >
-            Discover More
-            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
-          </a>
-          <a
-            href="#ecosystem"
-            className="inline-flex items-center gap-2 px-10 py-4 border border-primary/40 text-foreground text-xs font-medium tracking-[0.2em] uppercase hover:border-primary hover:text-primary transition-all duration-300"
-          >
-            Sales Ecosystem
-          </a>
-        </motion.div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {customerBenefits.map((benefit) => (
+                <div key={benefit.label} className="flex items-center gap-3 border border-border bg-card/35 px-4 py-4 backdrop-blur-sm">
+                  <benefit.icon className="h-5 w-5 flex-shrink-0 text-primary" />
+                  <span className="text-sm font-medium text-foreground">{benefit.label}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
 
       {/* Scroll indicator */}
