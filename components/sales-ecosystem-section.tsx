@@ -41,7 +41,7 @@ export function SalesEcosystemSection() {
     <section id="ecosystem" className="relative overflow-hidden py-32">
       <div className="absolute inset-0 bg-background" />
       <div className="absolute left-0 top-0 h-full w-1/3 bg-primary/90 [clip-path:polygon(0_0,70%_0,100%_100%,0_100%)]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/10 via-background/85 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/95 to-background" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
