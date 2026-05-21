@@ -12,9 +12,9 @@ const stats = [
   },
   {
     icon: Truck,
-    value: '4',
-    label: 'Hot-Lot Ranges',
-    description: 'Daihatsu Gran Max, Hino 300, Isuzu ELF, and Mitsubishi Fuso FE'
+    value: '39',
+    label: 'Legacy Listed Variants',
+    description: 'Truck chassis, van body styles, pickup conversions, and other commercial vehicle entries'
   },
   {
     icon: Trophy,

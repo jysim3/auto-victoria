@@ -7,7 +7,7 @@ import { ArrowRight, ChevronDown, ClipboardCheck, CreditCard, ShieldCheck, Wrenc
 const proofPoints = [
   { value: '2013', label: 'Established in Penang' },
   { value: '5+', label: 'Commercial brand groups' },
-  { value: '4', label: 'Hot-lot model ranges' },
+  { value: '39', label: 'Legacy listed variants' },
 ]
 
 const customerBenefits = [
