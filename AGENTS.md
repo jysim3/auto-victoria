@@ -15,6 +15,8 @@ The site is deployed to GitHub Pages at:
 
 https://jysim3.github.io/auto-victoria/
 
+Unless the user explicitly says not to deploy, deploy all completed changes immediately by committing them to `main` and pushing to `origin` so the GitHub Pages workflow runs.
+
 Deployment is handled by `.github/workflows/pages.yml`. On each push to `main`, GitHub Actions:
 
 1. Checks out the repo.
