@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Clock, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
+import { ArrowRight, Clock, Mail, MapPin, Phone } from 'lucide-react'
 
 const contactInfo = [
   {
@@ -12,33 +12,33 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    label: 'Sales Phone',
+    label: 'Phone',
     value: '04-5082 333',
-    detail: 'Sales office: 9.00 am to 7.00 pm'
+    detail: 'Main office line from the reference site'
   },
   {
     icon: Phone,
-    label: 'Service Phone',
-    value: '04-5025 333',
-    detail: 'Service centre and workshop: 8.30 am to 5.30 pm'
+    label: 'Mobile',
+    value: '013-525 3333',
+    detail: 'Mobile contact listed by Auto Victoria'
   },
   {
     icon: Mail,
     label: 'Email',
-    value: 'admin@autovictoria.com.my',
-    detail: 'Sales: sales@autovictoria.com.my'
+    value: 'sptan@autovictoria.com.my',
+    detail: 'Email listed on the reference site'
   },
   {
-    icon: MessageCircle,
-    label: 'WhatsApp',
-    value: '013-525 3333',
-    detail: 'Message our sales team'
+    icon: Phone,
+    label: 'Fax',
+    value: '04-5025 333',
+    detail: 'Fax number listed by Auto Victoria'
   },
   {
     icon: Clock,
-    label: 'Business Hours',
-    value: 'Sales: 9.00 am - 7.00 pm',
-    detail: 'Service centre: 8.30 am - 5.30 pm'
+    label: 'Office Location',
+    value: 'Bukit Minyak',
+    detail: 'Mukim 14, 14000 Bukit Mertajam'
   },
 ]
 
@@ -75,7 +75,7 @@ export function ContactSection() {
           </h2>
           <p className="max-w-2xl mx-auto text-muted-foreground text-lg leading-relaxed">
             Whether you&apos;re looking for commercial vehicles, fleet solutions, or partnership opportunities, 
-            our team is ready to assist you.
+            use the contact details listed by Auto Victoria to reach the team directly.
           </p>
           
           {/* Gold divider */}
@@ -138,7 +138,7 @@ export function ContactSection() {
             viewport={{ once: true }}
           >
             <div className="bg-card/30 backdrop-blur-sm border border-border rounded-xl p-8 lg:p-10">
-              <h3 className="text-xl font-semibold text-foreground mb-6">Send us a message</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-6">Prepare an inquiry</h3>
               
               <form className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
@@ -202,13 +202,13 @@ export function ContactSection() {
                   />
                 </div>
 
-                <button
-                  type="submit"
+                <a
+                  href="mailto:sptan@autovictoria.com.my?subject=Vehicle%20Inquiry%20from%20Auto%20Victoria%20Website"
                   className="group w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-all duration-300"
                 >
-                  Send Message
+                  Email Auto Victoria
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
+                </a>
               </form>
             </div>
           </motion.div>

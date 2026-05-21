@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 const footerLinks = {
   company: [
     { name: 'About Us', href: '#about' },
+    { name: 'Brands', href: '#brands' },
     { name: 'Our Growth', href: '#growth' },
     { name: 'Services', href: '#services' },
     { name: 'Sales Ecosystem', href: '#ecosystem' },
@@ -17,10 +18,10 @@ const footerLinks = {
     { name: 'Body & Paint', href: '#services' },
   ],
   contact: [
-    { name: 'Sales: 04-5082 333', href: 'tel:045082333' },
-    { name: 'Service: 04-5025 333', href: 'tel:045025333' },
-    { name: 'WhatsApp: 013-525 3333', href: 'https://wa.me/60135253333' },
-    { name: 'sales@autovictoria.com.my', href: 'mailto:sales@autovictoria.com.my' },
+    { name: 'Tel: 04-5082 333', href: 'tel:045082333' },
+    { name: 'Mobile: 013-525 3333', href: 'tel:60135253333' },
+    { name: 'Fax: 04-5025 333', href: '#contact' },
+    { name: 'sptan@autovictoria.com.my', href: 'mailto:sptan@autovictoria.com.my' },
   ],
 }
 

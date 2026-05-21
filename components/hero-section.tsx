@@ -5,9 +5,9 @@ import Image from 'next/image'
 import { ArrowRight, ChevronDown, ClipboardCheck, CreditCard, ShieldCheck, Wrench } from 'lucide-react'
 
 const proofPoints = [
-  { value: '300+', label: 'Vehicles sold yearly' },
-  { value: 'Top 3', label: 'Daihatsu dealer in Malaysia' },
-  { value: '2000+', label: 'Business customers' },
+  { value: '2013', label: 'Established in Penang' },
+  { value: '5+', label: 'Commercial brand groups' },
+  { value: '4', label: 'Hot-lot model ranges' },
 ]
 
 const customerBenefits = [
@@ -90,7 +90,7 @@ export function HeroSection() {
               className="max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
             >
               New and used vans and trucks, financing, insurance, registration, inspection, body work,
-              and servicing access arranged through one commercial vehicle partner.
+              and commercial vehicle sourcing arranged through one Bukit Mertajam partner.
             </motion.p>
 
             {/* CTA Buttons */}

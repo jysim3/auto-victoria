@@ -12,33 +12,33 @@ const stats = [
   },
   {
     icon: Truck,
-    value: '300+',
-    label: 'Vehicles Sold Yearly',
-    description: 'Trusted by businesses across Malaysia'
+    value: '4',
+    label: 'Hot-Lot Ranges',
+    description: 'Daihatsu Gran Max, Hino 300, Isuzu ELF, and Mitsubishi Fuso FE'
   },
   {
     icon: Trophy,
-    value: 'Top 3',
-    label: 'Daihatsu Dealer',
-    description: 'In Malaysia within 1 year'
+    value: '5+',
+    label: 'Brand Groups',
+    description: 'Daihatsu, Hino, Isuzu, Mitsubishi Fuso, King Long, JBC, Maxus, and selected others'
   },
   {
     icon: Handshake,
-    value: 'Trusted',
-    label: 'Commercial Partners',
-    description: 'Serving Banchuan Agency, Uni Distribution, Asia Power, LT Plus, Warisan Ali Group Sdn Bhd, and others'
+    value: 'BM',
+    label: 'Bukit Mertajam',
+    description: 'Located at Jalan Besar Bukit Minyak, Mukim 14, Pulau Pinang'
   },
   {
     icon: Users,
-    value: '2000+',
-    label: 'Business Customers',
-    description: 'A growing base across logistics, construction, trading, and transportation'
+    value: 'RM63k+',
+    label: 'Entry Listing',
+    description: 'Daihatsu Gran Max was listed from RM 63,388 on the reference site'
   },
   {
     icon: BadgeCheck,
-    value: 'MOF',
-    label: 'Registered Dealer',
-    description: 'Licensed to participate in Malaysia government procurement'
+    value: '2020',
+    label: 'Legacy Site',
+    description: 'Reference content and product listings came from the existing autovictoria.com.my website'
   },
 ]
 
