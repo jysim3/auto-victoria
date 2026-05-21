@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Calendar, Truck, Trophy, Users } from 'lucide-react'
+import { BadgeCheck, Calendar, Handshake, Truck, Trophy, Users } from 'lucide-react'
 
 const stats = [
   {
@@ -23,10 +23,22 @@ const stats = [
     description: 'In Malaysia within 1 year'
   },
   {
+    icon: Handshake,
+    value: 'Trusted',
+    label: 'Commercial Partners',
+    description: 'Serving Banchuan Agency, Uni Distribution, Asia Power, LT Plus, Warisan Ali Group Sdn Bhd, and others'
+  },
+  {
     icon: Users,
     value: '2000+',
     label: 'Business Customers',
-    description: 'Growing network of satisfied clients'
+    description: 'A growing base across logistics, construction, trading, and transportation'
+  },
+  {
+    icon: BadgeCheck,
+    value: 'MOF',
+    label: 'Registered Dealer',
+    description: 'Licensed to participate in Malaysia government procurement'
   },
 ]
 
@@ -69,7 +81,7 @@ export function GrowthHighlightsSection() {
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}

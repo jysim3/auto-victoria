@@ -4,6 +4,12 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { ArrowRight, ChevronDown } from 'lucide-react'
 
+const proofPoints = [
+  { value: '300+', label: 'Vehicles sold yearly' },
+  { value: 'Top 3', label: 'Daihatsu dealer in Malaysia' },
+  { value: '2000+', label: 'Business customers' },
+]
+
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -22,8 +28,10 @@ export function HeroSection() {
       {/* Subtle vignette */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.5)_100%)]" />
 
-      {/* Ambient gold glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 blur-[180px] rounded-full" />
+      {/* Deck-inspired yellow panels */}
+      <div className="absolute -top-10 left-[8%] hidden h-[42vh] w-56 bg-primary/90 lg:block [clip-path:polygon(0_0,100%_0,100%_76%,50%_100%,0_76%)]" />
+      <div className="absolute bottom-0 right-[10%] hidden h-[46vh] w-56 bg-primary/90 lg:block [clip-path:polygon(0_0,100%_0,100%_80%,50%_100%,0_80%)]" />
+      <div className="absolute left-0 top-[64%] h-44 w-full -skew-y-12 bg-background/90" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 lg:px-8 text-center">
         {/* Pre-headline */}
@@ -31,11 +39,11 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-16"
+          className="mb-12"
         >
-          <span className="inline-flex items-center gap-4 text-[11px] tracking-[0.4em] text-primary/80 uppercase">
+          <span className="inline-flex items-center gap-4 text-[11px] tracking-[0.35em] text-primary/90 uppercase">
             <span className="w-12 h-px bg-primary/40" />
-            Est. 2013
+            Bukit Mertajam, Penang | Established 2013
             <span className="w-12 h-px bg-primary/40" />
           </span>
         </motion.div>
@@ -45,14 +53,17 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-12"
+          className="mb-10"
         >
-          <h1 className="font-[var(--font-display)] tracking-[0.2em] leading-[1.1]">
-            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground font-medium">
+          <h1 className="font-[var(--font-display)] tracking-[0.12em] leading-[0.95]">
+            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground font-bold">
               AUTO
             </span>
-            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-primary font-medium">
+            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground font-bold">
               VICTORIA
+            </span>
+            <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-transparent [-webkit-text-stroke:1px_var(--primary)] font-bold">
+              GROUP
             </span>
           </h1>
         </motion.div>
@@ -76,14 +87,28 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.9 }}
           className="max-w-xl mx-auto text-xs md:text-sm text-muted-foreground tracking-[0.25em] uppercase mb-16 font-light"
         >
-          Commercial Vehicle Excellence Since 2013
+          Partner for the Next Stage of Commercial Mobility
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.95 }}
+          className="mx-auto mb-12 grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-3"
+        >
+          {proofPoints.map((item) => (
+            <div key={item.label} className="border border-primary/30 bg-background/70 px-5 py-4 backdrop-blur-sm">
+              <p className="text-2xl font-bold text-primary">{item.value}</p>
+              <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-muted-foreground">{item.label}</p>
+            </div>
+          ))}
+        </motion.div>
 
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          transition={{ duration: 0.8, delay: 1.1 }}
           className="flex flex-col sm:flex-row gap-6 justify-center items-center"
         >
           <a
@@ -94,10 +119,10 @@ export function HeroSection() {
             <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
           </a>
           <a
-            href="#contact"
+            href="#ecosystem"
             className="inline-flex items-center gap-2 px-10 py-4 border border-primary/40 text-foreground text-xs font-medium tracking-[0.2em] uppercase hover:border-primary hover:text-primary transition-all duration-300"
           >
-            Get In Touch
+            Sales Ecosystem
           </a>
         </motion.div>
       </div>

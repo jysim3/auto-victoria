@@ -6,29 +6,49 @@ import { useRef } from 'react'
 
 const timeline = [
   {
+    year: '2004-2006',
+    title: 'Customer Service Foundation',
+    description: 'The founder built early frontline experience as a hairstylist, developing the service mindset and relationship skills that later shaped the company.'
+  },
+  {
+    year: '2007-2008',
+    title: 'Dealership Exposure',
+    description: 'Through Sun Lean Auto, a small new and used commercial vehicle dealer, the founder gained exposure to Isuzu dealership operations in 2007 and Honda dealership operations in 2008.'
+  },
+  {
     year: '2013',
-    title: 'The Foundation',
+    title: 'Auto Victoria Established',
     description: 'AUTO VICTORIA SDN BHD was established in Bukit Mertajam, Penang as a used commercial vehicle dealer, supplying carefully selected pre-owned vans and trucks to businesses.'
   },
   {
-    year: '2015',
-    title: 'Service Expansion',
-    description: 'Expanded operations to include comprehensive after-sales support, PUSPAKOM inspection services, and JPJ registration assistance.'
-  },
-  {
-    year: '2018',
+    year: 'Growth',
     title: 'New Vehicle Sales',
-    description: 'Transitioned from used vehicles to new van and truck sales, partnering with Daihatsu to serve logistics, construction, trading, and transportation sectors.'
+    description: 'As demand grew, the business expanded from used commercial vehicles into new van and truck sales, serving agriculture, logistics, construction, trading, and transportation sectors.'
   },
   {
-    year: '2019',
-    title: 'Top 3 Achievement',
-    description: 'Achieved Top 3 Daihatsu Dealer status in Malaysia within just one year of signing the dealership agreement.'
+    year: 'Daihatsu',
+    title: 'Main Dealership',
+    description: "Daihatsu is currently Auto Victoria's main dealership, supported by sales, servicing access, inspection, registration, licensing, insurance, and credit services."
   },
   {
     year: 'Today',
     title: 'Trusted Partner',
-    description: 'Recognised as a trusted commercial vehicle dealership with over 300 vehicles sold yearly and 2000+ business customers, serving major partners including Banchuan Agency, Uni Distribution, and Asia Power.'
+    description: 'Recognised as a trusted commercial vehicle dealership with over 300 commercial vehicles sold yearly and major partners including Banchuan Agency, Uni Distribution, Asia Power, LT Plus, and Warisan Ali Group Sdn Bhd.'
+  },
+]
+
+const principles = [
+  {
+    title: 'Vision',
+    description: 'To become a leading truck dealership known for reliability, service excellence, and customer-focused solutions in Malaysia and beyond.'
+  },
+  {
+    title: 'Mission',
+    description: 'To deliver reliable commercial vehicles, provide professional after-sales support, and serve customers with integrity and efficiency.'
+  },
+  {
+    title: 'Core Values',
+    description: 'Cooperation, mutual success, trust, and efficiency guide the way Auto Victoria builds long-term customer relationships.'
   },
 ]
 
@@ -55,13 +75,29 @@ export function BrandStorySection() {
             A Decade of Building Trust
           </h2>
           <p className="max-w-2xl mx-auto text-muted-foreground text-lg leading-relaxed">
-            From humble beginnings to becoming one of Malaysia&apos;s most trusted commercial vehicle dealerships, 
-            our journey is defined by dedication, growth, and unwavering commitment to our customers.
+            From early customer-service experience to a growing commercial vehicle dealership, 
+            our journey is defined by practical exposure, dedication, and long-term customer support.
           </p>
           
           {/* Gold divider */}
           <div className="mt-8 mx-auto w-24 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
         </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-6 mb-20">
+          {principles.map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-card/30 backdrop-blur-sm border border-border rounded-lg p-6"
+            >
+              <h3 className="text-lg font-semibold text-foreground mb-3">{item.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+            </motion.div>
+          ))}
+        </div>
 
         {/* Timeline */}
         <div ref={ref} className="relative">

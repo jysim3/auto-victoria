@@ -5,12 +5,12 @@ import Image from 'next/image'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 
 const partnerBenefits = [
-  'Access to Northern Malaysia market expertise',
+  'Commercial vehicle market experience from Bukit Mertajam, Pulau Pinang',
   'Proven track record with 300+ vehicle sales',
   'Comprehensive after-sales support network',
-  'Strong customer relationships and trust',
-  'Agile and responsive business operations',
-  'Growth-focused partnership model'
+  'PUSPAKOM, JPJ, registration, licensing, insurance, and credit support',
+  'Trusted by Banchuan Agency, Uni Distribution, Asia Power, LT Plus, Warisan Ali Group Sdn Bhd, and others',
+  'Cooperation, mutual success, trust, and efficiency'
 ]
 
 export function PartnershipSection() {
@@ -39,10 +39,10 @@ export function PartnershipSection() {
               Your Strategic Partner in <span className="text-primary">Commercial Mobility</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Auto Victoria Group stands ready to partner with leading commercial vehicle manufacturers 
-              such as Isuzu. Our decade of experience, market expertise, and commitment to excellence 
-              make us the ideal distribution partner for brands looking to strengthen their presence 
-              in Malaysia.
+              AUTO VICTORIA SDN BHD is a trusted commercial vehicle sales company with Daihatsu as its
+              current main dealership. Auto Victoria is ready to support the next stage of commercial vehicle
+              growth with local market relationships, sales capability, financing support, and a customer-first
+              ownership model.
             </p>
 
             {/* Benefits list */}
@@ -112,7 +112,7 @@ export function PartnershipSection() {
                 className="absolute -bottom-4 -left-4 bg-card border border-border rounded-lg p-4 shadow-xl backdrop-blur-sm"
               >
                 <span className="text-2xl font-bold text-primary">10+</span>
-                <p className="text-xs text-muted-foreground">Years Experience</p>
+                <p className="text-xs text-muted-foreground">Years Established</p>
               </motion.div>
             </div>
           </motion.div>

@@ -7,17 +7,20 @@ const footerLinks = {
     { name: 'About Us', href: '#about' },
     { name: 'Our Growth', href: '#growth' },
     { name: 'Services', href: '#services' },
+    { name: 'Sales Ecosystem', href: '#ecosystem' },
     { name: 'Partnership', href: '#partnership' },
   ],
   services: [
     { name: 'Vehicle Sales', href: '#services' },
-    { name: 'Financing', href: '#services' },
-    { name: 'Fleet Support', href: '#services' },
-    { name: 'Body Repair', href: '#services' },
+    { name: 'PUSPAKOM Inspection', href: '#services' },
+    { name: 'JPJ Services', href: '#services' },
+    { name: 'Body & Paint', href: '#services' },
   ],
-  legal: [
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Terms of Service', href: '#' },
+  contact: [
+    { name: 'Sales: 04-5082 333', href: 'tel:045082333' },
+    { name: 'Service: 04-5025 333', href: 'tel:045025333' },
+    { name: 'WhatsApp: 013-525 3333', href: 'https://wa.me/60135253333' },
+    { name: 'sales@autovictoria.com.my', href: 'mailto:sales@autovictoria.com.my' },
   ],
 }
 
@@ -40,12 +43,12 @@ export function Footer() {
             <a href="#" className="flex items-center gap-3 mb-6">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/AutoVICpng-ThXmYs14zqqSGRgFKbLabpxC2USggD.png"
-                alt="Auto Victoria Group"
+                alt="AUTO VICTORIA SDN BHD"
                 className="h-14 w-auto"
               />
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Young, Agile, and Built for Growth. Your trusted partner for commercial vehicles in Malaysia.
+              AUTO VICTORIA SDN BHD is a trusted commercial vehicle dealer and growing van and truck dealership in Bukit Mertajam, Pulau Pinang.
             </p>
             <div className="w-16 h-px bg-gradient-to-r from-primary to-transparent" />
           </motion.div>
@@ -99,9 +102,9 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-foreground font-semibold mb-6 text-sm tracking-wide">Legal</h4>
+            <h4 className="text-foreground font-semibold mb-6 text-sm tracking-wide">Contact</h4>
             <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
+              {footerLinks.contact.map((link) => (
                 <li key={link.name}>
                   <a 
                     href={link.href}
@@ -125,7 +128,7 @@ export function Footer() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm">
-              © {new Date().getFullYear()} Auto Victoria Group. All rights reserved.
+              © {new Date().getFullYear()} AUTO VICTORIA SDN BHD. All rights reserved.
             </p>
             <p className="text-muted-foreground text-xs">
               Crafted with excellence in Malaysia

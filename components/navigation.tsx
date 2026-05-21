@@ -8,6 +8,7 @@ const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Growth', href: '#growth' },
   { name: 'Services', href: '#services' },
+  { name: 'Ecosystem', href: '#ecosystem' },
   { name: 'Partnership', href: '#partnership' },
   { name: 'Contact', href: '#contact' },
 ]
@@ -42,7 +43,7 @@ export function Navigation() {
             <a href="#" className="flex items-center gap-3 group">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/AutoVICpng-ThXmYs14zqqSGRgFKbLabpxC2USggD.png"
-                alt="Auto Victoria Group"
+                alt="AUTO VICTORIA SDN BHD"
                 className="h-12 w-auto"
               />
             </a>

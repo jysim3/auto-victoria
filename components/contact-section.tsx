@@ -1,26 +1,44 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { MapPin, Phone, Mail, ArrowRight } from 'lucide-react'
+import { ArrowRight, Clock, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
 
 const contactInfo = [
   {
     icon: MapPin,
     label: 'Location',
-    value: 'Northern Malaysia',
-    detail: 'Serving the Northern Region'
+    value: 'No. 1857, MK 14 Jalan Besar Bukit Minyak',
+    detail: '14000 Bukit Mertajam, Pulau Pinang'
   },
   {
     icon: Phone,
-    label: 'Phone',
-    value: '+60 4-XXX XXXX',
-    detail: 'Mon - Sat, 9AM - 6PM'
+    label: 'Sales Phone',
+    value: '04-5082 333',
+    detail: 'Sales office: 9.00 am to 7.00 pm'
+  },
+  {
+    icon: Phone,
+    label: 'Service Phone',
+    value: '04-5025 333',
+    detail: 'Service centre and workshop: 8.30 am to 5.30 pm'
   },
   {
     icon: Mail,
     label: 'Email',
-    value: 'info@autovictoria.my',
-    detail: 'We reply within 24 hours'
+    value: 'admin@autovictoria.com.my',
+    detail: 'Sales: sales@autovictoria.com.my'
+  },
+  {
+    icon: MessageCircle,
+    label: 'WhatsApp',
+    value: '013-525 3333',
+    detail: 'Message our sales team'
+  },
+  {
+    icon: Clock,
+    label: 'Business Hours',
+    value: 'Sales: 9.00 am - 7.00 pm',
+    detail: 'Service centre: 8.30 am - 5.30 pm'
   },
 ]
 
@@ -73,25 +91,27 @@ export function ContactSection() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            {contactInfo.map((item, index) => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group flex gap-5 p-6 bg-card/20 backdrop-blur-sm border border-border rounded-lg hover:border-primary/40 hover:bg-card/40 transition-all duration-500"
-              >
-                <div className="w-14 h-14 rounded-lg bg-secondary/50 border border-border flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 group-hover:border-primary/30 transition-all duration-500">
-                  <item.icon className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors duration-500" />
-                </div>
-                <div>
-                  <span className="text-sm text-muted-foreground">{item.label}</span>
-                  <p className="text-lg font-semibold text-foreground mt-1">{item.value}</p>
-                  <p className="text-sm text-muted-foreground mt-1">{item.detail}</p>
-                </div>
-              </motion.div>
-            ))}
+            <div className="grid xl:grid-cols-2 gap-6">
+              {contactInfo.map((item, index) => (
+                <motion.div
+                  key={item.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group flex gap-5 p-6 bg-card/20 backdrop-blur-sm border border-border rounded-lg hover:border-primary/40 hover:bg-card/40 transition-all duration-500"
+                >
+                  <div className="w-14 h-14 rounded-lg bg-secondary/50 border border-border flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 group-hover:border-primary/30 transition-all duration-500">
+                    <item.icon className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors duration-500" />
+                  </div>
+                  <div>
+                    <span className="text-sm text-muted-foreground">{item.label}</span>
+                    <p className="text-lg font-semibold text-foreground mt-1">{item.value}</p>
+                    <p className="text-sm text-muted-foreground mt-1">{item.detail}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
 
             {/* Map placeholder */}
             <motion.div
@@ -104,7 +124,7 @@ export function ContactSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-secondary/10 flex items-center justify-center">
                 <div className="text-center">
                   <MapPin className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <p className="text-muted-foreground text-sm">Northern Malaysia</p>
+                  <p className="text-muted-foreground text-sm">Bukit Minyak, Bukit Mertajam, Pulau Pinang</p>
                 </div>
               </div>
             </motion.div>

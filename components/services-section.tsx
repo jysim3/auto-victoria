@@ -16,7 +16,7 @@ const services = [
   {
     icon: Car,
     title: 'Vehicle Sales',
-    description: 'New and used commercial vehicles - vans and trucks from Daihatsu and other trusted manufacturers'
+    description: 'New and used commercial vehicles, with Daihatsu as the current main dealership'
   },
   {
     icon: CreditCard,
@@ -31,27 +31,27 @@ const services = [
   {
     icon: FileCheck,
     title: 'PUSPAKOM Inspection',
-    description: 'Complete vehicle inspection and certification services for all commercial vehicles'
+    description: 'Inspection service support for commercial vehicles purchased from Auto Victoria'
   },
   {
     icon: FileText,
     title: 'JPJ Services',
-    description: 'Road tax renewal, ownership transfer, and complete registration handling'
+    description: 'Road tax renewal, ownership transfer, registration, and licensing support'
   },
   {
     icon: Wrench,
     title: 'Service Centre',
-    description: 'Authorized service centre with workshop facilities for maintenance and repairs'
+    description: 'Easy access to servicing through the same company after vehicle purchase'
   },
   {
     icon: Hammer,
     title: 'Body Construction',
-    description: 'Custom body construction, body repair, and professional paint services'
+    description: 'Custom body construction, body repair, and body and paint services'
   },
   {
     icon: Users,
     title: 'After-Sales Support',
-    description: 'Dedicated long-term customer support and fleet management assistance'
+    description: 'Dedicated long-term customer support through professional service and transparent operations'
   },
 ]
 

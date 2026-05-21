@@ -17,8 +17,8 @@ const cinzel = Cinzel({
 })
 
 export const metadata: Metadata = {
-  title: 'Auto Victoria Group | Malaysia Commercial Vehicle Dealership',
-  description: 'Young, Agile, and Built for Growth. A fast-growing commercial vehicle dealership built on trust, speed, and long-term customer support.',
+  title: 'AUTO VICTORIA SDN BHD | Malaysia Commercial Vehicle Dealership',
+  description: 'AUTO VICTORIA SDN BHD is a trusted commercial vehicle dealer in Bukit Mertajam, Pulau Pinang, offering vehicle sales, servicing access, PUSPAKOM, JPJ, insurance, and credit support.',
   generator: 'v0.app',
   icons: {
     icon: [
