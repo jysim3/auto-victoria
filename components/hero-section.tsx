@@ -24,8 +24,8 @@ export function HeroSection() {
           className="object-cover object-[62%_center]"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/86 via-background/42 to-background/5" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/72 via-background/12 to-background/8" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/96 via-background/72 to-background/12 sm:from-background/86 sm:via-background/42 sm:to-background/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/78 via-background/20 to-background/8 sm:from-background/72 sm:via-background/12" />
       </div>
       
       {/* Subtle vignette */}
@@ -78,7 +78,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
-              className="max-w-2xl text-lg leading-relaxed text-foreground/84 drop-shadow-[0_2px_14px_rgba(0,0,0,0.65)] md:text-xl"
+              className="max-w-[17.5rem] text-base font-medium leading-7 text-foreground/95 drop-shadow-[0_2px_18px_rgba(0,0,0,0.9)] sm:max-w-2xl sm:text-lg sm:font-normal sm:leading-relaxed sm:text-foreground/84 md:text-xl"
             >
               Vans, trucks, financing, JPJ, PUSPAKOM, and after-sales support from Bukit Mertajam.
             </motion.p>
