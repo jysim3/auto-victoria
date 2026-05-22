@@ -21,16 +21,7 @@ export const metadata: Metadata = {
   description: 'AUTO VICTORIA SDN BHD is a commercial vehicle dealer in Bukit Mertajam, Pulau Pinang, presenting Hino, Isuzu, Daihatsu, Mitsubishi Fuso, JBC, Maxus, King Long, and other commercial vehicle listings.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: `${basePath}/icon-light-32x32.png`,
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: `${basePath}/icon-dark-32x32.png`,
-        media: '(prefers-color-scheme: dark)',
-      },
-    ],
+    icon: `${basePath}/favicon.ico`,
     apple: `${basePath}/apple-icon.png`,
   },
 }
