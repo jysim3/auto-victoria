@@ -73,7 +73,7 @@ const brandGroups = [
     brand: 'Other Brands',
     image: 'https://static.wixstatic.com/media/dbadab_a10b10db0f744b2d897bd83521f0d237~mv2.jpg/v1/fill/w_978,h_565,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/MAXUS%20V80.jpg',
     alt: 'Maxus V80 commercial vehicle',
-    summary: 'Additional brands and vehicles listed on the legacy site',
+    summary: 'Additional commercial vehicle options available by customer needs',
     models: ['JBC', 'Placer-X', 'Maxus V80', 'King Long'],
   },
 ]
@@ -111,13 +111,13 @@ export function FleetShowcaseSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-primary text-sm tracking-[0.3em] uppercase mb-4 block">Brand Lineup</span>
+          <span className="text-primary text-sm tracking-[0.3em] uppercase mb-4 block">Available Commercial Vehicles</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-            Commercial Vehicles on the Lot
+            Vans, Trucks, and Body Styles for Real Work
           </h2>
           <p className="max-w-2xl mx-auto text-muted-foreground text-lg leading-relaxed">
-            The legacy Auto Victoria site listed these brand pages, truck models, body styles, and other
-            commercial vehicles across its Hino, Isuzu, Daihatsu, Mitsubishi Fuso, and Other Brand sections.
+            Auto Victoria helps businesses compare suitable commercial vehicles across truck chassis,
+            van body styles, pickup conversions, chiller vans, mobile cafe builds, and fleet-use options.
           </p>
           
           {/* Gold divider */}

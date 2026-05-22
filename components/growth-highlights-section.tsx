@@ -12,9 +12,9 @@ const stats = [
   },
   {
     icon: Truck,
-    value: '39',
-    label: 'Legacy Listed Variants',
-    description: 'Truck chassis, van body styles, pickup conversions, and other commercial vehicle entries'
+    value: '300+',
+    label: 'Vehicles Sold Yearly',
+    description: 'Commercial vehicles delivered for local SMEs, fleet operators, and growing businesses'
   },
   {
     icon: Trophy,
@@ -30,15 +30,15 @@ const stats = [
   },
   {
     icon: Users,
-    value: 'RM63k+',
-    label: 'Entry Listing',
-    description: 'Daihatsu Gran Max was listed from RM 63,388 on the reference site'
+    value: '100+',
+    label: 'Repeat Fleet Units',
+    description: 'Major commercial customers have each purchased over 100 units through Auto Victoria'
   },
   {
     icon: BadgeCheck,
-    value: '2020',
-    label: 'Legacy Site',
-    description: 'Reference content and product listings came from the existing autovictoria.com.my website'
+    value: '3',
+    label: 'Languages Supported',
+    description: 'Sales support available for English, Bahasa Malaysia, and Chinese-speaking customers'
   },
 ]
 
@@ -68,12 +68,13 @@ export function GrowthHighlightsSection() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <span className="text-primary text-sm tracking-[0.3em] uppercase mb-4 block">By The Numbers</span>
+          <span className="text-primary text-sm tracking-[0.3em] uppercase mb-4 block">Credibility Check</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-            Growth That Speaks
+            Established, Local, and Built for Business Buyers
           </h2>
           <p className="max-w-2xl mx-auto text-muted-foreground text-lg leading-relaxed">
-            Our achievements reflect our commitment to excellence and the trust our customers place in us.
+            Auto Victoria combines showroom presence, commercial vehicle experience, financing support,
+            and long-term customer relationships from Bukit Mertajam, Penang.
           </p>
           
           {/* Gold divider */}

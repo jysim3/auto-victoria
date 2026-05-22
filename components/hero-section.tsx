@@ -2,12 +2,12 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { ArrowRight, ChevronDown, ClipboardCheck, CreditCard, ShieldCheck, Wrench } from 'lucide-react'
+import { ArrowRight, ChevronDown, ClipboardCheck, CreditCard, Phone, ShieldCheck, Wrench } from 'lucide-react'
 
 const proofPoints = [
   { value: '2013', label: 'Established in Penang' },
   { value: '5+', label: 'Commercial brand groups' },
-  { value: '39', label: 'Legacy listed variants' },
+  { value: '300+', label: 'Vehicles sold yearly' },
 ]
 
 const customerBenefits = [
@@ -16,6 +16,8 @@ const customerBenefits = [
   { icon: ShieldCheck, label: 'Insurance support ready' },
   { icon: Wrench, label: 'Servicing access after purchase' },
 ]
+
+const whatsappHref = 'https://wa.me/60135253333?text=Hi%20Auto%20Victoria%2C%20I%27d%20like%20to%20ask%20about%20commercial%20vehicles.'
 
 const dealershipPhotos = [
   {
@@ -107,8 +109,8 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.9 }}
               className="max-w-2xl text-lg leading-relaxed text-foreground/82 drop-shadow-[0_2px_14px_rgba(0,0,0,0.65)] md:text-xl"
             >
-              New and used vans and trucks, financing, insurance, registration, inspection, body work,
-              and commercial vehicle sourcing arranged through one Bukit Mertajam partner.
+              Established commercial vehicle dealership in Bukit Mertajam for vans, trucks, financing,
+              insurance, JPJ, PUSPAKOM, body work, and after-sales support.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -119,17 +121,18 @@ export function HeroSection() {
               className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
             >
               <a
-                href="#services"
+                href={whatsappHref}
                 className="group inline-flex items-center justify-center gap-3 bg-primary px-9 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:bg-primary/90"
               >
-                See What We Provide
+                WhatsApp Sales
                 <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
               </a>
               <a
-                href="#contact"
+                href="tel:60135253333"
                 className="inline-flex items-center justify-center gap-2 border border-primary/40 px-9 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-foreground transition-all duration-300 hover:border-primary hover:text-primary"
               >
-                Talk to Sales
+                <Phone size={14} />
+                Call 013-525 3333
               </a>
             </motion.div>
           </div>

@@ -1,7 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Clock, Mail, MapPin, Phone } from 'lucide-react'
+import { ArrowRight, Languages, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
+
+const whatsappHref = 'https://wa.me/60135253333?text=Hi%20Auto%20Victoria%2C%20I%27d%20like%20to%20ask%20about%20commercial%20vehicles.%20My%20business%20needs%3A'
 
 const contactInfo = [
   {
@@ -14,32 +16,39 @@ const contactInfo = [
     icon: Phone,
     label: 'Phone',
     value: '04-5082 333',
-    detail: 'Main office line from the reference site'
+    detail: 'Main office line'
   },
   {
     icon: Phone,
     label: 'Mobile',
     value: '013-525 3333',
-    detail: 'Mobile contact listed by Auto Victoria'
+    detail: 'Call or WhatsApp sales'
   },
   {
     icon: Mail,
     label: 'Email',
     value: 'sptan@autovictoria.com.my',
-    detail: 'Email listed on the reference site'
+    detail: 'Business inquiries'
   },
   {
     icon: Phone,
     label: 'Fax',
     value: '04-5025 333',
-    detail: 'Fax number listed by Auto Victoria'
+    detail: 'Office fax'
   },
   {
-    icon: Clock,
-    label: 'Office Location',
-    value: 'Bukit Minyak',
-    detail: 'Mukim 14, 14000 Bukit Mertajam'
+    icon: Languages,
+    label: 'Languages',
+    value: 'EN / BM / 中文',
+    detail: 'Sales support for local business buyers'
   },
+]
+
+const inquirySteps = [
+  'Vehicle type or body style needed',
+  'Business use case and load requirements',
+  'Financing, insurance, JPJ, or PUSPAKOM support',
+  'Preferred delivery timing'
 ]
 
 export function ContactSection() {
@@ -71,11 +80,11 @@ export function ContactSection() {
         >
           <span className="text-primary text-sm tracking-[0.3em] uppercase mb-4 block">Get In Touch</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-            Let&apos;s Start a Conversation
+            Speak Directly with Auto Victoria
           </h2>
           <p className="max-w-2xl mx-auto text-muted-foreground text-lg leading-relaxed">
-            Whether you&apos;re looking for commercial vehicles, fleet solutions, or partnership opportunities, 
-            use the contact details listed by Auto Victoria to reach the team directly.
+            For vehicle inquiries, fleet needs, after-sales support, or dealership partnership discussions,
+            call or WhatsApp the Bukit Mertajam team directly.
           </p>
           
           {/* Gold divider */}
@@ -130,7 +139,7 @@ export function ContactSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right: Contact Form */}
+          {/* Right: Inquiry Actions */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -138,78 +147,56 @@ export function ContactSection() {
             viewport={{ once: true }}
           >
             <div className="bg-card/30 backdrop-blur-sm border border-border rounded-xl p-8 lg:p-10">
-              <h3 className="text-xl font-semibold text-foreground mb-6">Prepare an inquiry</h3>
-              
-              <form className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm text-muted-foreground mb-2">Name</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="w-full px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="company" className="block text-sm text-muted-foreground mb-2">Company</label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      className="w-full px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
-                      placeholder="Your company"
-                    />
-                  </div>
-                </div>
+              <span className="text-xs uppercase tracking-[0.24em] text-primary">Fastest Response</span>
+              <h3 className="mt-3 text-2xl font-semibold text-foreground">Start with WhatsApp or a phone call</h3>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                Share the vehicle type, business use case, and timing. The team can guide options for
+                sales, financing, insurance, PUSPAKOM, JPJ, and after-sales support.
+              </p>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm text-muted-foreground mb-2">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
-                    placeholder="your@email.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm text-muted-foreground mb-2">Subject</label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    className="w-full px-4 py-3 bg-input border border-border rounded-lg text-foreground focus:outline-none focus:border-primary transition-colors duration-300"
-                  >
-                    <option value="" className="bg-card">Select a topic</option>
-                    <option value="vehicle-inquiry" className="bg-card">Vehicle Inquiry</option>
-                    <option value="fleet-solutions" className="bg-card">Fleet Solutions</option>
-                    <option value="partnership" className="bg-card">Partnership Opportunity</option>
-                    <option value="service" className="bg-card">Service &amp; Support</option>
-                    <option value="other" className="bg-card">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm text-muted-foreground mb-2">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    className="w-full px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
-                    placeholder="Tell us about your needs..."
-                  />
-                </div>
-
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                <a
+                  href={whatsappHref}
+                  className="group inline-flex items-center justify-center gap-3 rounded-lg bg-primary px-6 py-4 font-medium text-primary-foreground transition-all duration-300 hover:bg-primary/90"
+                >
+                  <MessageCircle size={18} />
+                  WhatsApp Sales
+                  <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                </a>
+                <a
+                  href="tel:60135253333"
+                  className="inline-flex items-center justify-center gap-3 rounded-lg border border-primary/40 px-6 py-4 font-medium text-foreground transition-all duration-300 hover:border-primary hover:text-primary"
+                >
+                  <Phone size={18} />
+                  Call Mobile
+                </a>
+                <a
+                  href="tel:045082333"
+                  className="inline-flex items-center justify-center gap-3 rounded-lg border border-border px-6 py-4 font-medium text-foreground transition-all duration-300 hover:border-primary hover:text-primary"
+                >
+                  <Phone size={18} />
+                  Call Office
+                </a>
                 <a
                   href="mailto:sptan@autovictoria.com.my?subject=Vehicle%20Inquiry%20from%20Auto%20Victoria%20Website"
-                  className="group w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-3 rounded-lg border border-border px-6 py-4 font-medium text-foreground transition-all duration-300 hover:border-primary hover:text-primary"
                 >
-                  Email Auto Victoria
-                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
+                  <Mail size={18} />
+                  Email
                 </a>
-              </form>
+              </div>
+
+              <div className="mt-8 border-t border-border pt-8">
+                <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-foreground">Helpful details to send</h4>
+                <div className="mt-5 grid gap-3">
+                  {inquirySteps.map((step) => (
+                    <div key={step} className="flex items-center gap-3 text-sm text-muted-foreground">
+                      <span className="h-1.5 w-1.5 rotate-45 bg-primary" />
+                      {step}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

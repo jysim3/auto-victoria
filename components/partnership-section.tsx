@@ -6,12 +6,14 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 
 const partnerBenefits = [
   'Commercial vehicle market experience from Bukit Mertajam, Pulau Pinang',
-  'Proven track record with 300+ vehicle sales',
+  'Proven track record with 300+ commercial vehicles sold yearly',
   'Comprehensive after-sales support network',
   'PUSPAKOM, JPJ, registration, licensing, insurance, and credit support',
   'Trusted by Banchuan Agency, Uni Distribution, Asia Power, LT Plus, Warisan Ali Group Sdn Bhd, and others',
   'Cooperation, mutual success, trust, and efficiency'
 ]
+
+const whatsappHref = 'https://wa.me/60135253333?text=Hi%20Auto%20Victoria%2C%20I%27d%20like%20to%20discuss%20a%20commercial%20vehicle%20or%20dealership%20partnership%20opportunity.'
 
 export function PartnershipSection() {
   return (
@@ -41,8 +43,8 @@ export function PartnershipSection() {
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               AUTO VICTORIA SDN BHD is a trusted commercial vehicle sales company with Daihatsu as its
               current main dealership. Auto Victoria is ready to support the next stage of commercial vehicle
-              growth with local market relationships, sales capability, financing support, and a customer-first
-              ownership model.
+              growth with local market relationships, sales capability, financing support, multilingual sales
+              communication, and a customer-first ownership model.
             </p>
 
             {/* Benefits list */}
@@ -64,10 +66,10 @@ export function PartnershipSection() {
 
             {/* CTA */}
             <a
-              href="#contact"
+              href={whatsappHref}
               className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium rounded hover:bg-primary/90 transition-all duration-300"
             >
-              Discuss Partnership
+              WhatsApp Auto Victoria
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
             </a>
           </motion.div>

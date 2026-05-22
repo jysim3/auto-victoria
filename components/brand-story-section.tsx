@@ -33,7 +33,7 @@ const timeline = [
   {
     year: 'Today',
     title: 'Trusted Partner',
-    description: 'Recognised as a trusted commercial vehicle dealership with over 300 commercial vehicles sold yearly and major partners including Banchuan Agency, Uni Distribution, Asia Power, LT Plus, and Warisan Ali Group Sdn Bhd.'
+    description: 'Recognised as a trusted commercial vehicle dealership with over 300 commercial vehicles sold yearly and major customers including Banchuan Agency, Uni Distribution, Asia Power, LT Plus, and Warisan Ali Group Sdn Bhd.'
   },
 ]
 
@@ -75,8 +75,8 @@ export function BrandStorySection() {
             A Decade of Building Trust
           </h2>
           <p className="max-w-2xl mx-auto text-muted-foreground text-lg leading-relaxed">
-            From early customer-service experience to a growing commercial vehicle dealership, 
-            our journey is defined by practical exposure, dedication, and long-term customer support.
+            From early customer-service experience to an established commercial vehicle dealership,
+            our journey is defined by practical know-how, trusted relationships, and long-term support.
           </p>
           
           {/* Gold divider */}

@@ -20,6 +20,7 @@ const footerLinks = {
   contact: [
     { name: 'Tel: 04-5082 333', href: 'tel:045082333' },
     { name: 'Mobile: 013-525 3333', href: 'tel:60135253333' },
+    { name: 'WhatsApp Sales', href: 'https://wa.me/60135253333?text=Hi%20Auto%20Victoria%2C%20I%27d%20like%20to%20ask%20about%20commercial%20vehicles.' },
     { name: 'Fax: 04-5025 333', href: '#contact' },
     { name: 'sptan@autovictoria.com.my', href: 'mailto:sptan@autovictoria.com.my' },
   ],
@@ -49,7 +50,7 @@ export function Footer() {
               />
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              AUTO VICTORIA SDN BHD is a trusted commercial vehicle dealer and growing van and truck dealership in Bukit Mertajam, Pulau Pinang.
+              AUTO VICTORIA SDN BHD is an established commercial vehicle dealer for vans, trucks, financing, registration support, and after-sales coordination in Bukit Mertajam, Pulau Pinang.
             </p>
             <div className="w-16 h-px bg-gradient-to-r from-primary to-transparent" />
           </motion.div>
@@ -132,7 +133,7 @@ export function Footer() {
               © {new Date().getFullYear()} AUTO VICTORIA SDN BHD. All rights reserved.
             </p>
             <p className="text-muted-foreground text-xs">
-              Crafted with excellence in Malaysia
+              Commercial vehicle support in English, Bahasa Malaysia, and Chinese
             </p>
           </div>
         </motion.div>

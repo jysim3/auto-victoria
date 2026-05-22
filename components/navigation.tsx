@@ -7,12 +7,14 @@ import { Menu, X } from 'lucide-react'
 const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Brands', href: '#brands' },
-  { name: 'Growth', href: '#growth' },
+  { name: 'Trust', href: '#growth' },
   { name: 'Services', href: '#services' },
   { name: 'Ecosystem', href: '#ecosystem' },
   { name: 'Partnership', href: '#partnership' },
   { name: 'Contact', href: '#contact' },
 ]
+
+const whatsappHref = 'https://wa.me/60135253333?text=Hi%20Auto%20Victoria%2C%20I%27d%20like%20to%20ask%20about%20commercial%20vehicles.'
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -64,10 +66,10 @@ export function Navigation() {
 
             {/* CTA Button */}
             <a
-              href="#contact"
+              href={whatsappHref}
               className="hidden md:inline-flex px-6 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded hover:bg-primary/90 transition-all duration-300"
             >
-              Get in Touch
+              WhatsApp
             </a>
 
             {/* Mobile Menu Button */}
@@ -107,14 +109,14 @@ export function Navigation() {
                 </motion.a>
               ))}
               <motion.a
-                href="#contact"
+                href={whatsappHref}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mt-4 px-8 py-3 bg-primary text-primary-foreground font-medium rounded hover:bg-primary/90 transition-all duration-300"
               >
-                Get in Touch
+                WhatsApp Sales
               </motion.a>
             </nav>
           </motion.div>

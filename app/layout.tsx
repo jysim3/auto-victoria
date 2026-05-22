@@ -18,7 +18,7 @@ const cinzel = Cinzel({
 
 export const metadata: Metadata = {
   title: 'AUTO VICTORIA SDN BHD | Malaysia Commercial Vehicle Dealership',
-  description: 'AUTO VICTORIA SDN BHD is a commercial vehicle dealer in Bukit Mertajam, Pulau Pinang, presenting Hino, Isuzu, Daihatsu, Mitsubishi Fuso, JBC, Maxus, King Long, and other commercial vehicle listings.',
+  description: 'AUTO VICTORIA SDN BHD is an established commercial vehicle dealer in Bukit Mertajam, Pulau Pinang for vans, trucks, financing, insurance, JPJ, PUSPAKOM, body work, and after-sales support.',
   generator: 'v0.app',
   icons: {
     icon: `${basePath}/favicon.ico`,
