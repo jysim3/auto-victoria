@@ -58,7 +58,7 @@ export function HeroSection() {
               className="mb-6"
             >
               <h1 className="max-w-4xl font-[var(--font-display)] text-5xl font-bold leading-[0.98] tracking-[0.04em] text-foreground drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl xl:text-8xl">
-                Established Commercial Vehicle Partner.
+                Commercial Vehicles, Refined.
               </h1>
             </motion.div>
 
@@ -80,8 +80,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.9 }}
               className="max-w-2xl text-lg leading-relaxed text-foreground/84 drop-shadow-[0_2px_14px_rgba(0,0,0,0.65)] md:text-xl"
             >
-              Auto Victoria supports business owners with vans, trucks, financing, insurance, JPJ,
-              PUSPAKOM, body work, and after-sales coordination from Bukit Mertajam, Penang.
+              Vans, trucks, financing, JPJ, PUSPAKOM, and after-sales support from Bukit Mertajam.
             </motion.p>
 
             {/* CTA Buttons */}
