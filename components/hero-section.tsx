@@ -24,15 +24,15 @@ export function HeroSection() {
           className="object-cover object-[62%_center]"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/68 to-background/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/92 via-background/28 to-background/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/86 via-background/42 to-background/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/72 via-background/12 to-background/8" />
       </div>
       
       {/* Subtle vignette */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_72%_38%,transparent_0%,rgba(0,0,0,0.46)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_72%_38%,transparent_0%,rgba(0,0,0,0.28)_100%)]" />
 
       <div className="absolute right-[9%] top-0 hidden h-36 w-24 bg-primary/70 lg:block [clip-path:polygon(0_0,100%_0,100%_82%,50%_100%,0_82%)]" />
-      <div className="absolute left-0 top-[82%] h-40 w-full -skew-y-12 bg-background/82" />
+      <div className="absolute left-0 top-[84%] h-36 w-full -skew-y-12 bg-background/70" />
       <div className="absolute bottom-0 left-0 h-2 w-full bg-primary" />
 
       <div className="relative z-10 mx-auto flex min-h-[94svh] max-w-7xl flex-col justify-center px-6 pb-20 pt-28 lg:px-8">
