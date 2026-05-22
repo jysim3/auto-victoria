@@ -78,6 +78,24 @@ const brandGroups = [
   },
 ]
 
+const sitePhotos = [
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/OutSide_03_Night-Bb6m3kv3o8vW9ylPBdxWxa225y3lub.jpg',
+    alt: 'Auto Victoria dealership exterior at night',
+    label: 'Showroom exterior',
+  },
+  {
+    src: 'https://static.wixstatic.com/media/dbadab_47628464464648b28342db9fe7010758~mv2.png/v1/crop/x_0,y_34,w_846,h_573/fill/w_680,h_454,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/mobilecafe-master2.png',
+    alt: 'Daihatsu Gran Max mobile cafe conversion',
+    label: 'Body conversions',
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Office_1st_Customer_Room_02-lw2Xe4B4KT8t34WDzEY0Ww3IbzxS0e.jpg',
+    alt: 'Auto Victoria customer room',
+    label: 'Consultation space',
+  },
+]
+
 export function FleetShowcaseSection() {
   return (
     <section id="brands" className="relative py-24 overflow-hidden">
@@ -106,6 +124,31 @@ export function FleetShowcaseSection() {
           <div className="mt-8 mx-auto w-24 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
         </motion.div>
 
+        <div className="mb-12 grid gap-4 md:grid-cols-3">
+          {sitePhotos.map((photo, index) => (
+            <motion.div
+              key={photo.label}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="group relative min-h-72 overflow-hidden rounded-lg border border-border bg-card/40"
+            >
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(min-width: 768px) 33vw, 100vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/15 to-transparent" />
+              <p className="absolute bottom-5 left-5 text-xs font-semibold uppercase tracking-[0.2em] text-foreground">
+                {photo.label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
         {/* Image Grid */}
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           {brandGroups.map((group, index) => (
@@ -117,7 +160,7 @@ export function FleetShowcaseSection() {
               viewport={{ once: true }}
               className="group relative"
             >
-              <div className="grid h-full overflow-hidden rounded-xl border border-border bg-card/30 transition-colors duration-500 group-hover:border-primary/30 sm:grid-cols-[240px_1fr]">
+              <div className="grid h-full overflow-hidden rounded-lg border border-border bg-card/30 transition-colors duration-500 group-hover:border-primary/30 sm:grid-cols-[240px_1fr]">
                 <div className="relative min-h-56 bg-background/50">
                   <Image
                     src={group.image}
