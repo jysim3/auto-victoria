@@ -8,7 +8,7 @@ import { ContactSection } from '@/components/contact-section'
 import { Footer } from '@/components/footer'
 
 export const metadata: Metadata = {
-  title: 'Services | Auto Victoria 6S Commitment',
+  title: 'Support Beyond Sale | Auto Victoria',
   description:
     'Auto Victoria services include vehicle sales, service, 24/7 repair support, financing, spare parts, survey advice, JPJ, PUSPAKOM, insurance, body construction, and after-sales support.',
 }
@@ -19,7 +19,7 @@ export default function ServicesPage() {
       <Navigation />
       <PageHero
         eyebrow="Services"
-        title="Complete Ownership Support, from Inquiry to After-Sales"
+        title="Support Beyond Sale"
         description="Auto Victoria supports business customers through sales consultation, financing, insurance, PUSPAKOM, JPJ, service centre access, spare parts, repair support, and practical survey advice."
         primaryHref="/contact"
         primaryLabel="Request Support"

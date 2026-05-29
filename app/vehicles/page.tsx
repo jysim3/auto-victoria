@@ -7,7 +7,7 @@ import { ContactSection } from '@/components/contact-section'
 import { Footer } from '@/components/footer'
 
 export const metadata: Metadata = {
-  title: 'Commercial Vehicles | Auto Victoria',
+  title: 'Built for Business | Auto Victoria',
   description:
     'Explore commercial vehicle options from Auto Victoria including Daihatsu, Hino, Isuzu, Mitsubishi Fuso, Maxus, King Long, vans, trucks, and body styles for business use.',
 }
@@ -18,7 +18,7 @@ export default function VehiclesPage() {
       <Navigation />
       <PageHero
         eyebrow="Vehicles and Brands"
-        title="Vans, Trucks, and Body Styles for Real Business Use"
+        title="Built for Business"
         description="Compare practical commercial vehicle options across truck chassis, van body styles, pickup conversions, chiller vans, mobile cafe builds, and fleet-use configurations."
         primaryHref="/contact"
         primaryLabel="Ask About Vehicles"

@@ -7,7 +7,7 @@ import { TrustedBusinessesSection } from '@/components/trusted-businesses-sectio
 import { Footer } from '@/components/footer'
 
 export const metadata: Metadata = {
-  title: 'About Auto Victoria | Commercial Vehicle Dealership in Penang',
+  title: 'Built on Trust | Auto Victoria',
   description:
     'Learn about Auto Victoria SDN BHD, its commercial vehicle dealership journey, company vision, values, customer trust, and growth in Bukit Mertajam, Penang.',
 }
@@ -18,7 +18,7 @@ export default function AboutPage() {
       <Navigation />
       <PageHero
         eyebrow="About Auto Victoria"
-        title="A Commercial Vehicle Company Built on Practical Trust"
+        title="Built on Trust"
         description="Auto Victoria grew from customer-service discipline into a trusted Bukit Mertajam dealership supporting businesses with commercial vehicles, financing coordination, registration support, and long-term after-sales care."
         primaryHref="/contact"
         primaryLabel="Contact the Team"
