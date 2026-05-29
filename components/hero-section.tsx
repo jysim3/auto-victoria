@@ -3,16 +3,43 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { ArrowRight, ChevronDown, Phone } from 'lucide-react'
+import { useLanguage } from '@/components/language-provider'
 
-const proofPoints = [
-  { value: '2013', label: 'Established in Penang' },
-  { value: '5+', label: 'Commercial brand groups' },
-  { value: '300+', label: 'Vehicles sold yearly' },
-]
+const copy = {
+  en: {
+    eyebrow: 'Auto Victoria | Bukit Mertajam, Penang',
+    title: 'Commercial Vehicles, Refined.',
+    tagline: 'Vans, trucks, financing, JPJ, PUSPAKOM, and after-sales support from Bukit Mertajam.',
+    whatsapp: 'WhatsApp Sales',
+    call: 'Call 013-525 3333',
+    scroll: 'Scroll',
+    proofPoints: [
+      { value: '2013', label: 'Established in Penang' },
+      { value: '5+', label: 'Commercial brand groups' },
+      { value: '300+', label: 'Vehicles sold yearly' },
+    ],
+  },
+  zh: {
+    eyebrow: 'Auto Victoria | 槟城大山脚',
+    title: '精致商用车方案',
+    tagline: '从大山脚为您提供厢式车、货车、融资、JPJ、PUSPAKOM 与售后支援。',
+    whatsapp: 'WhatsApp 销售咨询',
+    call: '拨打 013-525 3333',
+    scroll: '下滑',
+    proofPoints: [
+      { value: '2013', label: '创立于槟城' },
+      { value: '5+', label: '商用车品牌组' },
+      { value: '300+', label: '年销售商用车' },
+    ],
+  },
+}
 
 const whatsappHref = 'https://wa.me/60135253333?text=Hi%20Auto%20Victoria%2C%20I%27d%20like%20to%20ask%20about%20commercial%20vehicles.'
 
 export function HeroSection() {
+  const { locale } = useLanguage()
+  const text = copy[locale]
+
   return (
     <section className="relative min-h-[94svh] overflow-hidden">
       {/* Background Image */}
@@ -46,7 +73,7 @@ export function HeroSection() {
             >
               <span className="inline-flex max-w-full flex-wrap items-center gap-3 text-[11px] uppercase tracking-[0.28em] text-primary/90">
                 <span className="h-px w-10 bg-primary/50" />
-                Auto Victoria | Bukit Mertajam, Penang
+                {text.eyebrow}
               </span>
             </motion.div>
 
@@ -58,7 +85,7 @@ export function HeroSection() {
               className="mb-6"
             >
               <h1 className="max-w-4xl font-[var(--font-display)] text-5xl font-bold leading-[0.98] tracking-[0.04em] text-foreground drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl xl:text-8xl">
-                Commercial Vehicles, Refined.
+                {text.title}
               </h1>
             </motion.div>
 
@@ -80,7 +107,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.9 }}
               className="max-w-[17.5rem] text-base font-medium leading-7 text-foreground/95 drop-shadow-[0_2px_18px_rgba(0,0,0,0.9)] sm:max-w-2xl sm:text-lg sm:font-normal sm:leading-relaxed sm:text-foreground/84 md:text-xl"
             >
-              Vans, trucks, financing, JPJ, PUSPAKOM, and after-sales support from Bukit Mertajam.
+              {text.tagline}
             </motion.p>
 
             {/* CTA Buttons */}
@@ -94,7 +121,7 @@ export function HeroSection() {
                 href={whatsappHref}
                 className="group inline-flex items-center justify-center gap-3 bg-primary px-9 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:bg-primary/90"
               >
-                WhatsApp Sales
+                {text.whatsapp}
                 <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
               </a>
               <a
@@ -102,7 +129,7 @@ export function HeroSection() {
                 className="inline-flex items-center justify-center gap-2 border border-primary/40 px-9 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-foreground transition-all duration-300 hover:border-primary hover:text-primary"
               >
                 <Phone size={14} />
-                Call 013-525 3333
+                {text.call}
               </a>
             </motion.div>
         </div>
@@ -114,7 +141,7 @@ export function HeroSection() {
           className="mt-10 hidden max-w-3xl border-y border-primary/25 bg-background/58 backdrop-blur-sm md:block"
         >
             <div className="grid grid-cols-3">
-              {proofPoints.map((item) => (
+              {text.proofPoints.map((item) => (
                 <div key={item.label} className="border-r border-primary/20 px-4 py-5 last:border-r-0 sm:px-6">
                   <p className="text-2xl font-bold text-primary sm:text-3xl">{item.value}</p>
                   <p className="mt-2 text-[10px] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground sm:text-xs">{item.label}</p>
@@ -132,7 +159,7 @@ export function HeroSection() {
         className="absolute bottom-12 left-1/2 -translate-x-1/2"
       >
         <a href="#commitment" className="flex flex-col items-center gap-3 text-muted-foreground/50 hover:text-primary transition-colors duration-300">
-          <span className="text-[10px] tracking-[0.4em] uppercase">Scroll</span>
+          <span className="text-[10px] tracking-[0.4em] uppercase">{text.scroll}</span>
           <ChevronDown size={16} className="animate-bounce" />
         </a>
       </motion.div>

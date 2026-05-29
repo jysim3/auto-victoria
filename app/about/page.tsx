@@ -24,6 +24,14 @@ export default function AboutPage() {
         primaryLabel="Contact the Team"
         secondaryHref="/services"
         secondaryLabel="View Services"
+        zh={{
+          eyebrow: '关于 Auto Victoria',
+          title: '以信任成就事业',
+          description:
+            'Auto Victoria 从重视客户服务的实践出发，成长为大山脚值得信赖的商用车经销商，为企业提供商用车、融资协调、注册支援与长期售后照护。',
+          primaryLabel: '联系团队',
+          secondaryLabel: '查看服务',
+        }}
       />
       <BrandStorySection />
       <GrowthHighlightsSection />

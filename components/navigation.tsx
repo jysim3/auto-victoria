@@ -2,22 +2,37 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Languages, Menu, X } from 'lucide-react'
 import Link from 'next/link'
+import { useLanguage } from '@/components/language-provider'
 
-const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Vehicles', href: '/vehicles' },
-  { name: 'Services', href: '/services' },
-  { name: 'Contact', href: '/contact' },
-]
+const navLinks = {
+  en: [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Vehicles', href: '/vehicles' },
+    { name: 'Services', href: '/services' },
+    { name: 'Contact', href: '/contact' },
+  ],
+  zh: [
+    { name: '首页', href: '/' },
+    { name: '关于我们', href: '/about' },
+    { name: '商用车', href: '/vehicles' },
+    { name: '服务', href: '/services' },
+    { name: '联系', href: '/contact' },
+  ],
+}
 
 const whatsappHref = 'https://wa.me/60135253333?text=Hi%20Auto%20Victoria%2C%20I%27d%20like%20to%20ask%20about%20commercial%20vehicles.'
 
 export function Navigation() {
+  const { locale, toggleLocale } = useLanguage()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const links = navLinks[locale]
+  const whatsappLabel = locale === 'zh' ? 'WhatsApp 咨询' : 'WhatsApp'
+  const mobileWhatsappLabel = locale === 'zh' ? 'WhatsApp 销售咨询' : 'WhatsApp Sales'
+  const languageLabel = locale === 'zh' ? 'English' : '中文'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +67,7 @@ export function Navigation() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-6 lg:gap-8">
-              {navLinks.map((link) => (
+              {links.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
@@ -68,8 +83,18 @@ export function Navigation() {
               href={whatsappHref}
               className="hidden md:inline-flex px-6 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded hover:bg-primary/90 transition-all duration-300"
             >
-              WhatsApp
+              {whatsappLabel}
             </a>
+
+            <button
+              type="button"
+              onClick={toggleLocale}
+              className="hidden items-center gap-2 border border-primary/30 px-3 py-2 text-xs font-semibold text-foreground transition-all duration-300 hover:border-primary hover:text-primary md:inline-flex"
+              aria-label={locale === 'zh' ? 'Switch language to English' : '切换到中文'}
+            >
+              <Languages size={15} />
+              {languageLabel}
+            </button>
 
             {/* Mobile Menu Button */}
             <button
@@ -94,7 +119,7 @@ export function Navigation() {
             className="fixed inset-0 z-40 bg-background/98 backdrop-blur-lg pt-24 md:hidden"
           >
             <nav className="flex flex-col items-center gap-8 p-8">
-              {navLinks.map((link, index) => (
+              {links.map((link, index) => (
                 <motion.div
                   key={link.name}
                   initial={{ opacity: 0, y: 20 }}
@@ -118,8 +143,22 @@ export function Navigation() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mt-4 px-8 py-3 bg-primary text-primary-foreground font-medium rounded hover:bg-primary/90 transition-all duration-300"
               >
-                WhatsApp Sales
+                {mobileWhatsappLabel}
               </motion.a>
+              <motion.button
+                type="button"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                onClick={() => {
+                  toggleLocale()
+                  setIsMobileMenuOpen(false)
+                }}
+                className="inline-flex items-center gap-3 border border-primary/35 px-6 py-3 text-sm font-semibold text-foreground"
+              >
+                <Languages size={16} />
+                {languageLabel}
+              </motion.button>
             </nav>
           </motion.div>
         )}

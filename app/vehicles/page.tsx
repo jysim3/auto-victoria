@@ -24,6 +24,13 @@ export default function VehiclesPage() {
         primaryLabel="Ask About Vehicles"
         secondaryHref="/services"
         secondaryLabel="Ownership Support"
+        zh={{
+          eyebrow: '商用车与品牌',
+          title: '为商业而造',
+          description: '比较货车底盘、厢式车车身、皮卡改装、冷藏车、移动咖啡车与车队用途配置等实用商用车选择。',
+          primaryLabel: '咨询车辆',
+          secondaryLabel: '用车支援',
+        }}
       />
       <FleetShowcaseSection />
       <TrustedBusinessesSection />

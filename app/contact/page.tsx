@@ -23,6 +23,14 @@ export default function ContactPage() {
         primaryLabel="Call 013-525 3333"
         secondaryHref="/vehicles"
         secondaryLabel="View Vehicles"
+        zh={{
+          eyebrow: '联系',
+          title: '联系 Auto Victoria',
+          description:
+            '欢迎联系大山脚团队，咨询商用车、车队需求、融资、JPJ 或 PUSPAKOM 支援、服务协调与合作洽谈。',
+          primaryLabel: '拨打 013-525 3333',
+          secondaryLabel: '查看车辆',
+        }}
       />
       <ContactSection />
       <PartnershipSection />

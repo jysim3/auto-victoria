@@ -1,26 +1,36 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/components/language-provider'
 
-const customers = [
-  {
-    name: 'Banchuan Agency',
-    category: 'Logistic & Distribution Operator',
-    units: '100+ units'
+const copy = {
+  en: {
+    eyebrow: 'Trusted by Businesses',
+    title: 'Commercial Customers Rely on Auto Victoria for Practical, Fast Support',
+    intro:
+      'Auto Victoria serves a growing base of logistics, construction, trading, and transportation customers, from first-time business owners to established fleet operators.',
+    customers: [
+      { name: 'Banchuan Agency', category: 'Logistic & Distribution Operator', units: '100+ units' },
+      { name: 'Uni Distribution', category: 'Regional Supply Chain Partner', units: '100+ units' },
+      { name: 'Asia Power', category: 'Industrial & Equipment Transport', units: '100+ units' },
+    ],
   },
-  {
-    name: 'Uni Distribution',
-    category: 'Regional Supply Chain Partner',
-    units: '100+ units'
+  zh: {
+    eyebrow: '企业信赖',
+    title: '商业客户选择 Auto Victoria 的务实与快速支援',
+    intro: 'Auto Victoria 服务持续增长的物流、建筑、贸易与运输客户群，从首次购车的业主到成熟车队营运商。',
+    customers: [
+      { name: 'Banchuan Agency', category: '物流与配送营运商', units: '100+ 辆' },
+      { name: 'Uni Distribution', category: '区域供应链伙伴', units: '100+ 辆' },
+      { name: 'Asia Power', category: '工业与设备运输', units: '100+ 辆' },
+    ],
   },
-  {
-    name: 'Asia Power',
-    category: 'Industrial & Equipment Transport',
-    units: '100+ units'
-  },
-]
+}
 
 export function TrustedBusinessesSection() {
+  const { locale } = useLanguage()
+  const text = copy[locale]
+
   return (
     <section className="relative overflow-hidden py-28">
       <div className="absolute inset-0 bg-secondary/10" />
@@ -34,18 +44,17 @@ export function TrustedBusinessesSection() {
           viewport={{ once: true }}
           className="max-w-3xl"
         >
-          <span className="mb-4 block text-sm uppercase tracking-[0.3em] text-primary">Trusted by Businesses</span>
+          <span className="mb-4 block text-sm uppercase tracking-[0.3em] text-primary">{text.eyebrow}</span>
           <h2 className="text-3xl font-bold leading-tight text-foreground md:text-4xl lg:text-5xl">
-            Commercial Customers Rely on Auto Victoria for Practical, Fast Support
+            {text.title}
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            Auto Victoria serves a growing base of logistics, construction, trading, and transportation customers,
-            from first-time business owners to established fleet operators.
+            {text.intro}
           </p>
         </motion.div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {customers.map((customer, index) => (
+          {text.customers.map((customer, index) => (
             <motion.div
               key={customer.name}
               initial={{ opacity: 0, y: 28 }}

@@ -1,19 +1,30 @@
 import type { Metadata } from 'next'
-import { Inter, Cinzel } from 'next/font/google'
+import { Cormorant_Garamond, Long_Cang, Noto_Serif_SC } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { LanguageProvider } from '@/components/language-provider'
 import './globals.css'
 
 const basePath = process.env.NODE_ENV === 'production' ? '/auto-victoria' : ''
 
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: '--font-inter',
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-body',
+  display: 'swap',
 })
 
-const cinzel = Cinzel({ 
-  subsets: ["latin"],
+const longCang = Long_Cang({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-title',
+  display: 'swap',
+})
+
+const notoSerifSc = Noto_Serif_SC({
+  subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-display',
+  variable: '--font-cjk',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -32,9 +43,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-background">
-      <body className={`${inter.variable} ${cinzel.variable} font-sans antialiased`}>
-        {children}
+    <html lang="en" className="bg-background" suppressHydrationWarning>
+      <body className={`${cormorantGaramond.variable} ${longCang.variable} ${notoSerifSc.variable} font-sans antialiased`}>
+        <LanguageProvider>{children}</LanguageProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

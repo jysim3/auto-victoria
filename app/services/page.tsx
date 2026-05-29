@@ -25,6 +25,14 @@ export default function ServicesPage() {
         primaryLabel="Request Support"
         secondaryHref="/vehicles"
         secondaryLabel="View Vehicles"
+        zh={{
+          eyebrow: '服务',
+          title: '销售之后，持续支援',
+          description:
+            'Auto Victoria 为商业客户提供销售咨询、融资、保险、PUSPAKOM、JPJ、服务中心、零件、维修支援与实地评估建议。',
+          primaryLabel: '请求支援',
+          secondaryLabel: '查看车辆',
+        }}
       />
       <SixSCommitmentSection />
       <ServicesSection />

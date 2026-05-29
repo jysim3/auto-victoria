@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useLanguage } from '@/components/language-provider'
 
 const brandGroups = [
   {
@@ -96,7 +97,42 @@ const sitePhotos = [
   },
 ]
 
+const copy = {
+  en: {
+    eyebrow: 'Available Commercial Vehicles',
+    title: 'Vans, Trucks, and Body Styles for Real Work',
+    intro:
+      'Auto Victoria helps businesses compare suitable commercial vehicles across truck chassis, van body styles, pickup conversions, chiller vans, mobile cafe builds, and fleet-use options.',
+    photoLabels: ['Showroom exterior', 'Body conversions', 'Consultation space'],
+    brandLabel: 'Brand',
+    summaries: [
+      'HINO 300 Series light-duty trucks',
+      'ELF truck range and D-Max listings',
+      'Gran Max pickup and van conversion range',
+      'Canter FE Series commercial truck line',
+      'Additional commercial vehicle options available by customer needs',
+    ],
+  },
+  zh: {
+    eyebrow: '可选商用车',
+    title: '服务真实工作的厢式车、货车与车身形式',
+    intro: 'Auto Victoria 协助企业比较货车底盘、厢式车车身、皮卡改装、冷藏车、移动咖啡车与车队用途方案。',
+    photoLabels: ['展厅外观', '车身改装', '咨询空间'],
+    brandLabel: '品牌',
+    summaries: [
+      'HINO 300 Series 轻型货车',
+      'ELF 货车系列与 D-Max 车型',
+      'Gran Max 皮卡与厢式改装系列',
+      'Canter FE Series 商用货车系列',
+      '可按客户需求提供其他商用车选项',
+    ],
+  },
+}
+
 export function FleetShowcaseSection() {
+  const { locale } = useLanguage()
+  const text = copy[locale]
+
   return (
     <section id="brands" className="relative py-24 overflow-hidden">
       {/* Background */}
@@ -111,13 +147,12 @@ export function FleetShowcaseSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-primary text-sm tracking-[0.3em] uppercase mb-4 block">Available Commercial Vehicles</span>
+          <span className="text-primary text-sm tracking-[0.3em] uppercase mb-4 block">{text.eyebrow}</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-            Vans, Trucks, and Body Styles for Real Work
+            {text.title}
           </h2>
           <p className="max-w-2xl mx-auto text-muted-foreground text-lg leading-relaxed">
-            Auto Victoria helps businesses compare suitable commercial vehicles across truck chassis,
-            van body styles, pickup conversions, chiller vans, mobile cafe builds, and fleet-use options.
+            {text.intro}
           </p>
           
           {/* Gold divider */}
@@ -143,7 +178,7 @@ export function FleetShowcaseSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/15 to-transparent" />
               <p className="absolute bottom-5 left-5 text-xs font-semibold uppercase tracking-[0.2em] text-foreground">
-                {photo.label}
+                {text.photoLabels[index]}
               </p>
             </motion.div>
           ))}
@@ -171,12 +206,12 @@ export function FleetShowcaseSection() {
                 </div>
 
                 <div className="border-t border-border bg-card/70 p-6 sm:border-l sm:border-t-0">
-                  <p className="text-xs uppercase tracking-[0.22em] text-primary">Brand</p>
+                  <p className="text-xs uppercase tracking-[0.22em] text-primary">{text.brandLabel}</p>
                   <h3 className="mt-2 text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                     {group.brand}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {group.summary}
+                    {text.summaries[index] ?? group.summary}
                   </p>
                   <div className="mt-5 flex flex-wrap gap-2">
                     {group.models.map((model) => (
