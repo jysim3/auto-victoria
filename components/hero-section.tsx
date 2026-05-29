@@ -21,8 +21,8 @@ const copy = {
   },
   zh: {
     eyebrow: 'Auto Victoria | 槟城大山脚',
-    title: '臻载致远',
-    tagline: '以精品商用车方案，承载企业每一步远行。',
+    title: ['六心护航', '商路无忧'],
+    tagline: '销售、保养、维修、融资、零件与评估，Auto Victoria 以 6S 服务陪伴每一段营运路程。',
     whatsapp: 'WhatsApp 销售咨询',
     call: '拨打 013-525 3333',
     scroll: '下滑',
@@ -85,7 +85,13 @@ export function HeroSection() {
               className="mb-6"
             >
               <h1 className="max-w-4xl font-[var(--font-display)] text-5xl font-bold leading-[0.98] tracking-[0.04em] text-foreground drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl xl:text-8xl">
-                {text.title}
+                {Array.isArray(text.title)
+                  ? text.title.map((line) => (
+                      <span key={line} className="block">
+                        {line}
+                      </span>
+                    ))
+                  : text.title}
               </h1>
             </motion.div>
 
