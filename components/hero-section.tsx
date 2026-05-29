@@ -21,8 +21,8 @@ const copy = {
   },
   zh: {
     eyebrow: 'Auto Victoria | 槟城大山脚',
-    title: '精致商用车方案',
-    tagline: '从大山脚为您提供厢式车、货车、融资、JPJ、PUSPAKOM 与售后支援。',
+    title: '臻载致远',
+    tagline: '以精品商用车方案，承载企业每一步远行。',
     whatsapp: 'WhatsApp 销售咨询',
     call: '拨打 013-525 3333',
     scroll: '下滑',

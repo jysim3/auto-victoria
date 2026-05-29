@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Long_Cang, Noto_Serif_SC } from 'next/font/google'
+import { Cormorant_Garamond, Noto_Serif_SC } from 'next/font/google'
+import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import { LanguageProvider } from '@/components/language-provider'
 import './globals.css'
@@ -13,9 +14,8 @@ const cormorantGaramond = Cormorant_Garamond({
   display: 'swap',
 })
 
-const longCang = Long_Cang({
-  subsets: ['latin'],
-  weight: '400',
+const longCang = localFont({
+  src: './fonts/LongCang-Regular.ttf',
   variable: '--font-title',
   display: 'swap',
 })
