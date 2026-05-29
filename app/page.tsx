@@ -1,6 +1,7 @@
 import { Navigation } from '@/components/navigation'
 import { HeroSection } from '@/components/hero-section'
 import { BrandStorySection } from '@/components/brand-story-section'
+import { SixSCommitmentSection } from '@/components/six-s-commitment-section'
 import { GrowthHighlightsSection } from '@/components/growth-highlights-section'
 import { FleetShowcaseSection } from '@/components/fleet-showcase-section'
 import { ServicesSection } from '@/components/services-section'
@@ -16,6 +17,7 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <BrandStorySection />
+      <SixSCommitmentSection />
       <GrowthHighlightsSection />
       <FleetShowcaseSection />
       <ServicesSection />

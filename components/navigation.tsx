@@ -6,6 +6,7 @@ import { Menu, X } from 'lucide-react'
 
 const navLinks = [
   { name: 'About', href: '#about' },
+  { name: '6S', href: '#commitment' },
   { name: 'Brands', href: '#brands' },
   { name: 'Trust', href: '#growth' },
   { name: 'Services', href: '#services' },
@@ -52,7 +53,7 @@ export function Navigation() {
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6 lg:gap-8">
               {navLinks.map((link) => (
                 <a
                   key={link.name}

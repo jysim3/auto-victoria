@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 const footerLinks = {
   company: [
     { name: 'About Us', href: '#about' },
+    { name: '6S Commitment', href: '#commitment' },
     { name: 'Brands', href: '#brands' },
     { name: 'Our Growth', href: '#growth' },
     { name: 'Services', href: '#services' },
