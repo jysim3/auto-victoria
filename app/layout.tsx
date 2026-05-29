@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Noto_Serif_SC } from 'next/font/google'
+import { Cinzel, Cormorant_Garamond, Noto_Serif_SC } from 'next/font/google'
 import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import { LanguageProvider } from '@/components/language-provider'
@@ -11,6 +11,13 @@ const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-body',
+  display: 'swap',
+})
+
+const cinzel = Cinzel({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-display-latin',
   display: 'swap',
 })
 
@@ -44,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-background" suppressHydrationWarning>
-      <body className={`${cormorantGaramond.variable} ${longCang.variable} ${notoSerifSc.variable} font-sans antialiased`}>
+      <body className={`${cormorantGaramond.variable} ${cinzel.variable} ${longCang.variable} ${notoSerifSc.variable} font-sans antialiased`}>
         <LanguageProvider>{children}</LanguageProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

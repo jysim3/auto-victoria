@@ -133,7 +133,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    --font-heading: var(--font-body), var(--font-cjk), Georgia, serif;
+    --font-heading: var(--font-display-latin), 'Times New Roman', serif;
     --font-display: var(--font-heading);
     --font-body-serif: var(--font-body), var(--font-cjk), Georgia, serif;
     @apply bg-background text-foreground;
