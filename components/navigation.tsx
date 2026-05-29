@@ -3,16 +3,14 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import Link from 'next/link'
 
 const navLinks = [
-  { name: 'About', href: '#about' },
-  { name: '6S', href: '#commitment' },
-  { name: 'Brands', href: '#brands' },
-  { name: 'Trust', href: '#growth' },
-  { name: 'Services', href: '#services' },
-  { name: 'Ecosystem', href: '#ecosystem' },
-  { name: 'Partnership', href: '#partnership' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Vehicles', href: '/vehicles' },
+  { name: 'Services', href: '/services' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 const whatsappHref = 'https://wa.me/60135253333?text=Hi%20Auto%20Victoria%2C%20I%27d%20like%20to%20ask%20about%20commercial%20vehicles.'
@@ -44,24 +42,24 @@ export function Navigation() {
         <nav className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-3 group">
+            <Link href="/" className="flex items-center gap-3 group">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/AutoVICpng-ThXmYs14zqqSGRgFKbLabpxC2USggD.png"
                 alt="AUTO VICTORIA SDN BHD"
                 className="h-12 w-auto"
               />
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-6 lg:gap-8">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
                   href={link.href}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 tracking-wide"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
 
@@ -97,17 +95,20 @@ export function Navigation() {
           >
             <nav className="flex flex-col items-center gap-8 p-8">
               {navLinks.map((link, index) => (
-                <motion.a
+                <motion.div
                   key={link.name}
-                  href={link.href}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-2xl text-foreground hover:text-primary transition-colors duration-300 tracking-wide"
                 >
-                  {link.name}
-                </motion.a>
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-2xl text-foreground hover:text-primary transition-colors duration-300 tracking-wide"
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
               ))}
               <motion.a
                 href={whatsappHref}

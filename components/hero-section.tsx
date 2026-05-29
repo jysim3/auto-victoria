@@ -131,7 +131,7 @@ export function HeroSection() {
         transition={{ duration: 0.8, delay: 1.4 }}
         className="absolute bottom-12 left-1/2 -translate-x-1/2"
       >
-        <a href="#about" className="flex flex-col items-center gap-3 text-muted-foreground/50 hover:text-primary transition-colors duration-300">
+        <a href="#commitment" className="flex flex-col items-center gap-3 text-muted-foreground/50 hover:text-primary transition-colors duration-300">
           <span className="text-[10px] tracking-[0.4em] uppercase">Scroll</span>
           <ChevronDown size={16} className="animate-bounce" />
         </a>

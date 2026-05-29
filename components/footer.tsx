@@ -1,33 +1,50 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const footerLinks = {
   company: [
-    { name: 'About Us', href: '#about' },
-    { name: '6S Commitment', href: '#commitment' },
-    { name: 'Brands', href: '#brands' },
-    { name: 'Our Growth', href: '#growth' },
-    { name: 'Services', href: '#services' },
-    { name: 'Sales Ecosystem', href: '#ecosystem' },
-    { name: 'Partnership', href: '#partnership' },
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Vehicles & Brands', href: '/vehicles' },
+    { name: 'Services', href: '/services' },
+    { name: 'Contact', href: '/contact' },
   ],
   services: [
-    { name: 'Vehicle Sales', href: '#services' },
-    { name: 'PUSPAKOM Inspection', href: '#services' },
-    { name: 'JPJ Services', href: '#services' },
-    { name: 'Body & Paint', href: '#services' },
+    { name: 'Vehicle Sales', href: '/services' },
+    { name: 'PUSPAKOM Inspection', href: '/services' },
+    { name: 'JPJ Services', href: '/services' },
+    { name: 'Body & Paint', href: '/services' },
   ],
   contact: [
     { name: 'Tel: 04-5082 333', href: 'tel:045082333' },
     { name: 'Mobile: 013-525 3333', href: 'tel:60135253333' },
     { name: 'WhatsApp Sales', href: 'https://wa.me/60135253333?text=Hi%20Auto%20Victoria%2C%20I%27d%20like%20to%20ask%20about%20commercial%20vehicles.' },
-    { name: 'Fax: 04-5025 333', href: '#contact' },
+    { name: 'Fax: 04-5025 333', href: '/contact' },
     { name: 'sptan@autovictoria.com.my', href: 'mailto:sptan@autovictoria.com.my' },
   ],
 }
 
 export function Footer() {
+  const renderFooterLink = (link: { name: string; href: string }) => {
+    const className = 'text-muted-foreground text-sm hover:text-primary transition-colors duration-300'
+
+    if (link.href.startsWith('/')) {
+      return (
+        <Link href={link.href} className={className}>
+          {link.name}
+        </Link>
+      )
+    }
+
+    return (
+      <a href={link.href} className={className}>
+        {link.name}
+      </a>
+    )
+  }
+
   return (
     <footer className="relative py-16 overflow-hidden border-t border-border">
       {/* Background */}
@@ -43,13 +60,13 @@ export function Footer() {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <a href="#" className="flex items-center gap-3 mb-6">
+            <Link href="/" className="flex items-center gap-3 mb-6">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/AutoVICpng-ThXmYs14zqqSGRgFKbLabpxC2USggD.png"
                 alt="AUTO VICTORIA SDN BHD"
                 className="h-14 w-auto"
               />
-            </a>
+            </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               AUTO VICTORIA SDN BHD is an established commercial vehicle dealer for vans, trucks, financing, registration support, and after-sales coordination in Bukit Mertajam, Pulau Pinang.
             </p>
@@ -67,12 +84,7 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.href}
-                    className="text-muted-foreground text-sm hover:text-primary transition-colors duration-300"
-                  >
-                    {link.name}
-                  </a>
+                  {renderFooterLink(link)}
                 </li>
               ))}
             </ul>
@@ -88,12 +100,7 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.href}
-                    className="text-muted-foreground text-sm hover:text-primary transition-colors duration-300"
-                  >
-                    {link.name}
-                  </a>
+                  {renderFooterLink(link)}
                 </li>
               ))}
             </ul>
@@ -109,12 +116,7 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.contact.map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.href}
-                    className="text-muted-foreground text-sm hover:text-primary transition-colors duration-300"
-                  >
-                    {link.name}
-                  </a>
+                  {renderFooterLink(link)}
                 </li>
               ))}
             </ul>
